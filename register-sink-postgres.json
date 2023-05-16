@@ -1,0 +1,16 @@
+{
+  "name": "sink-postgres",
+  "config": {
+    "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",
+    "topics": "mysql.inventory.customers,mysql_propagation.inventory.customers",
+    "hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect",
+    "connection.url": "jdbc:postgresql://postgres:5432/postgres",
+    "connection.username": "postgres",
+    "connection.password": "dbz",
+    "database.time_zone": "Europe/Vienna",
+    "schema.evolution": "basic",
+    "insert.mode": "upsert",
+    "delete.enabled": "true",
+    "primary.key.mode": "record_key"
+  }
+}

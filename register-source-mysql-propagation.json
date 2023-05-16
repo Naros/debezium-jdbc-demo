@@ -1,0 +1,20 @@
+{
+  "name": "source-mysql-propagation",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "database.hostname": "mysql",
+    "database.user": "root",
+    "database.password": "debezium",
+    "database.port": "3306",
+    "database.server.name": "mysql-propagation",
+    "database.server.id": "12346",
+    "driver.connectionTimeZone": "Europe/Vienna",
+    "topic.prefix": "mysql_propagation",
+    "snapshot.mode": "initial",
+    "table.include.list": "inventory.customers",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+    "schema.history.internal.kafka.topic": "mysql-propagation-database-history",
+    "column.propagate.source.type": ".*",
+    "datatype.propagate.source.type": ".*"
+  }
+}
