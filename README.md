@@ -102,7 +102,7 @@ The output of this command is:
 You might notice that the destination character-based columns are created as `TEXT` data types.
 Unfortunately, the source events do not provide any details about the column's length by default, so the JDBC sink connector must pick the most generalized type.
 
-## Deploy with column/data type propagation
+### Deploy with column/data type propagation
 
 Debezium's has the ability to produce events with more column-based details including type, length, and precision.
 In order to see how this works, the demonstration includes one additional JSON file, `register-source-mysql-propagation.json`.
@@ -169,7 +169,7 @@ mysql> desc customers;
 4 rows in set (0.00 sec)
 ```
 
-## Testing data changes
+### Testing data changes
 
 While looking at the `inventory.customers` table in MySQL, execute the following update:
 
