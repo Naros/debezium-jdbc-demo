@@ -104,10 +104,9 @@ Unfortunately, the source events do not provide any details about the column's l
 
 ### Deploy with column/data type propagation
 
-Debezium's has the ability to produce events with more column-based details including type, length, and precision.
+Debezium has the ability to produce events with more column-based details including type, length, and precision.
 In order to see how this works, the demonstration includes one additional JSON file, `register-source-mysql-propagation.json`.
-W
-hen taking a look at the contents of this file, what's important are the following entries:
+When taking a look at the contents of this file, what's important are the following entries:
 
 ```json
 {
